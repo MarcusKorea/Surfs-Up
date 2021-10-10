@@ -4,11 +4,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, inspect
-<<<<<<< HEAD
 from flask import Flask, json, jsonify
-=======
-from flask import Flask, jsonify
->>>>>>> def40436e86a9faa5d55b0c678b4ae4dc07a8230
 
 # datetime packages
 from datetime import datetime as dt
@@ -17,10 +13,6 @@ from datetime import timedelta
 
 # create engine
 engine = create_engine("sqlite:///Resources/hawaii.sqlite")
-<<<<<<< HEAD
-=======
-
->>>>>>> def40436e86a9faa5d55b0c678b4ae4dc07a8230
 # reflect
 Base = automap_base()
 Base.prepare(engine, reflect = True)
@@ -36,10 +28,6 @@ conn = engine.connect()
 # Create session
 session = Session(engine)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> def40436e86a9faa5d55b0c678b4ae4dc07a8230
 # create app
 app = Flask(__name__)
 
@@ -51,13 +39,8 @@ def homepage():
     precipitation = "/api/v1.0/precipitation"
     stations = "/api/v1.0/stations"
     tobs = "/api/v1.0/tobs"
-<<<<<<< HEAD
     start_temp = "/api/v1.0/2011-01-01"
     start_end = "/api/v1.0/2011-01-01/2011-01-16"
-=======
-    start = "/api/v1.0/<start>"
-    temps = "/api/v1.0/<start> and /api/v1.0/2011-01-01/2011-01-016"
->>>>>>> def40436e86a9faa5d55b0c678b4ae4dc07a8230
 
     return f""" Welcome to the Weather Info API! <br> 
                 <br> To access these routes please copy and paste them into your browser <br> 
@@ -66,16 +49,10 @@ def homepage():
                 Preciptitation Info: {precipitation} <br>
                 Station Info: {stations} <br>
                 Tobs Info: {tobs} <br>
-<<<<<<< HEAD
                 Min, Average and Max Temps from a certain Date Info: {start_temp} <br>
                 Min, Average and Max Temps between Two Dates Info: {start_end}"""
 
 # precipation page done
-=======
-                From data Info : {start} <br>
-                Temps Info: {temps}"""
-
->>>>>>> def40436e86a9faa5d55b0c678b4ae4dc07a8230
 @app.route("/api/v1.0/precipitation")
 def precipation():
     # find the date of 12 months before the last day of the data set
@@ -97,16 +74,12 @@ def precipation():
 
         # add prcp value to prcp  key in dict
         prcp_dict["prcp"] = date.prcp
-<<<<<<< HEAD
 
         # add values to list
-=======
->>>>>>> def40436e86a9faa5d55b0c678b4ae4dc07a8230
         prcp_list.append(prcp_dict)
 
     return jsonify(prcp_list)
 
-<<<<<<< HEAD
 # stations page
 @app.route("/api/v1.0/stations")
 def stations():
@@ -209,11 +182,6 @@ def temp_start_end(start,end):
     temp_list.append(temp_dict)
 
     return jsonify(temp_list)
-=======
-
-
-
->>>>>>> def40436e86a9faa5d55b0c678b4ae4dc07a8230
 
 # Define main
 if __name__ == "__main__":
