@@ -1,4 +1,4 @@
-# SQLAlchemy Homework - Surfs Up!
+# Surfs Up!
 
 ![surfs-up.png](Images/surfs-up.png)
 
@@ -7,8 +7,6 @@ Congratulations! You've decided to treat yourself to a long holiday vacation in 
 ## Step 1 - Climate Analysis and Exploration
 
 To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
-
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
 
 * Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
 
@@ -28,8 +26,6 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
 * Plot the results using the DataFrame `plot` method.
 
-  ![precipitation](Images/precipitation.png)
-
 * Use Pandas to print the summary statistics for the precipitation data.
 
 ### Station Analysis
@@ -42,15 +38,12 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
   * Which station has the highest number of observations?
 
-  * Hint: You will need to use a function such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
 
 * Design a query to retrieve the last 12 months of temperature observation data (TOBS).
 
   * Filter by the station with the highest number of observations.
 
   * Plot the results as a histogram with `bins=12`.
-
-    ![station-histogram](Images/station-histogram.png)
 
 - - -
 
@@ -108,17 +101,11 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
 ### Temperature Analysis II
 
-* The starter notebook contains a function called `calc_temps` that will accept a start date and end date in the format `%Y-%m-%d`. The function will return the minimum, average, and maximum temperatures for that range of dates.
-
-* Use the `calc_temps` function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e., use "2017-01-01" if your trip start date was "2018-01-01").
-
 * Plot the min, avg, and max temperature from your previous query as a bar chart.
 
   * Use the average temperature as the bar height.
 
   * Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
-
-    ![temperature](Images/temperature.png)
 
 ### Daily Rainfall Average
 
@@ -134,8 +121,60 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
 * Use Pandas to plot an area plot (`stacked=False`) for the daily normals.
 
-  ![daily-normals](Images/daily-normals.png)
-
 ### Copyright
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+## **Summary**:
+
+## **Languages used**:
+- Python
+
+
+## **Python Packages Used**:
+- Pandas
+- Numpy
+- SQLAlchemy
+- Flask
+- Matplotlib
+- Datetime
+  
+## **Screenshots**
+## **Precipition Vs Date**
+![Precipition Vs Date](Images/precipitation.png)
+
+## **Station Histogram**
+![station-histogram](Images/station-histogram.png)
+
+## **Temperature**
+![temperature](Images/temperature.png)
+
+## **Daily Normals**
+![daily-normals](Images/daily-normals.png)
+
+## **Descriptive Statistics**
+![Descriptive Statistics](Images/describe.png)
+
+
+## **Running the jupyter notebooks**
+Before running any of the jupyter notebooks please install needed packages running the following code in the terminal.
+        pip install pandas
+        pip install sqlalchemy
+        pip install numpy
+        pip install flask
+        pip install sqlalchemy
+        pip install matplotlib
+        pip install datetime
+
+Or run this code in the first Jupyter Notebook
+
+        ! pip install --user pandas
+        ! pip install --user flask
+        ! pip install --user sqlalchemy
+        ! pip install --user numpy
+        ! pip install --user datetime
+        ! pip install --user matplotlib.pyplot
+1. Set your path to this folder. (If you are using Visual Studio Code just click File > Open Folder > Surfs Up!
+2. Then run the file *climate.ipynb*.
+3. Run the file *app.py* 
+
